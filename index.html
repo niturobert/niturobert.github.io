@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="theme-color" content="#000000">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Portfolio</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="md-top-app-bar-container">
+			<nav class="uk-navbar-container uk-container-expand" uk-navbar="mode: click">
+				<div class="uk-navbar-left">
+					<a class="uk-navbar-item" href=""><i class="material-icons md-icon md-color-white uk-hidden@m">menu</i></a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="uk-container uk-container-expand">
+		<h2 class="md-color-white">My Portfolio</h2>
+		<div class="content-before"></div>
+		<div data-uk-grid>
+			<div class="uk-width-1-1">
+            	<div class="uk-card uk-card-body uk-visible@m">
+					<div class="uk-overflow-auto" >
+						<!-- <ul uk-tab="connect: #card_tabs; animation:uk-animation-slide-top-small" class="uk-child-width-expand" id="main_tabs"> -->
+						<ul uk-tab="connect: #card_tabs; animation:uk-animation-scale-up" class="uk-child-width-expand" id="main_tabs">
+							<li class="ripple-surface ripple-surface--accent"><a href="#">About Me</a></li>
+							<li class="ripple-surface ripple-surface--accent"><a href="#">My Resume</a></li>
+							<li class="ripple-surface ripple-surface--accent"><a href="#">Contact Me</a></li>
+							<li class="ripple-surface ripple-surface--accent"><a href="#">Open Source</a></li>
+						</ul>
+					</div>
+					<br /><br /><br />
+					<ul id="card_tabs" class="uk-switcher">
+						<li>
+							<include src="about-me.html"></include>
+						</li>
+						<li>
+							<include src="my-resume.html"></include>
+						</li>
+						<li>
+							<include src="contact-me.html"></include>
+						</li>
+						<li>
+							<include src="open-source.html"></include>
+						</li>
+					</ul>
+					<br /><br />
+				</div>
+
+            	<div class="uk-card uk-card-body uk-hidden@m">
+					<h3>About Me</h3>
+					<include src="about-me.html"></include>
+					<br /><br />
+					<h3>My Resume</h3>
+					<include src="my-resume.html"></include>
+					<br /><br />
+					<h3>Contact Me</h3>
+					<include src="contact-me.html"></include>
+					<br /><br />
+					<h3>Open Source</h3>
+					<include src="open-source.html"></include>
+					<br /><br />
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<br /><br />
+
+	<div class="uk-section-small">
+		<div class="uk-container uk-container-expand uk-text-center uk-position-relative">
+			<span>Copyright © 2020 - Nitu Robert-Georgian</span>
+		</div>
+	</div>
+</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/md-uikit@1.4.2/dist/css/md-uikit.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/md-uikit@1.4.2/dist/js/md-uikit.js" ></script>
+
+<script>
+function JSIncluder() {
+	console.log("[JS Includer] initialization...")
+	let elements = document.getElementsByTagName("include")
+	for (let i = 0; i < elements.length; i++) {
+		let currentElement = elements[i]
+		let pageHTTPLink = currentElement.getAttribute("src")
+		if (!pageHTTPLink) {
+			console.error("[JS Includer] Missing required paramterer: src")
+			continue;
+		}
+
+		let request = new XMLHttpRequest()
+		request.onreadystatechange = function() {
+			if (this.readyState == XMLHttpRequest.DONE) {
+				if (this.status == 200) {
+					console.log("[JS Includer] Loaded %s", this.responseURL)
+					currentElement.innerHTML = this.responseText
+				} else {
+					console.error("[JS Includer] Status is not 200")
+				}
+			}
+		}
+
+		request.open("GET", pageHTTPLink, true)
+		request.send()
+
+		console.log("[JS Includer] Loading " + pageHTTPLink)
+	}
+}
+
+window.onload = function() {
+	JSIncluder()
+}
+</script>
+
+</html>
