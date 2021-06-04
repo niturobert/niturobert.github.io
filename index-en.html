@@ -38,14 +38,8 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.png" alt="" class="img-fluid" style="border-radius: 100%">
         <h1 class="text-light"><a href="index.html">Robert-Georgian Nitu</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://t.me/sighub" class="telegram"><i class="bx bxl-telegram"></i></a>
-          <a href="https://www.twitter.com/rg_nitu" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.instagram.com/sighub.official" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-        </div>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
@@ -82,7 +76,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/profile-img.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Full Stack Developer.</h3>
@@ -155,8 +149,8 @@
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="count-box">
-              <i class="bi bi-cart-text"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <i class="bi bi-card-checklist"></i>
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Certifications</strong><br /></p>
             </div>
           </div>
@@ -233,18 +227,19 @@
             </div>
 
             <div class="progress">
+              <span class="skill">Java<i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
               <span class="skill">Dart/Flutter<i class="val">65%</i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <div class="progress">
-              <span class="skill">Java<i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
             <div class="progress">
               <span class="skill">C/C++ <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
@@ -279,6 +274,21 @@
               </ul>
             </div>
 
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Embedded Systems Programmer, Backend Developer</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>KooReminder, Italy</em></p>
+              <ul>
+                <li>Led the team in the design, development, and implementation of the product</li>
+                <li>Delivered the product under budget and within deadlines</li>
+                <li>Awarded by the Erasmus Programme</li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>IT & Telecomunications</h4>
@@ -301,47 +311,14 @@
                 <li>Access Control</li>
               </ul>
             </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Full Stack Developer</h4>
-              <h5>2021</h5>
-              <p><em>BasiliaBasket, Italy</em></p>
-              <ul>
-                  <li>Developed and designed the website under 2 weeks</li>
-                  <li>Trained the staff to use the new IT system</li>
-              </ul>
             </div>
-            <div class="resume-item">
-              <h4>Full Stack Developer</h4>
-              <h5>2020</h5>
-              <p><em>Griffecommunity, Italy</em></p>
-              <ul>
-                <li>Improved the product selling process</li>
-                <li>Managed the backend of the website</li>
-                <li>Tested viability of new updates before launch</li>
-                <li>Identified and resolved a critical security vulnerability</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Embedded Systems Programmer, Backend Developer</h4>
-              <h5>2019 - 2020</h5>
-              <p><em>KooReminder, Italy</em></p>
-              <ul>
-                <li>Led the team in the design, development, and implementation of the product</li>
-                <li>Delivered the product under budget and within deadlines</li>
-                <li>Awarded by the Erasmus Programme</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
       </div>
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <!-- <section id="portfolio" class="portfolio section-bg">
       <div class="container">
         <div class="section-title">
           <h2>Portfolio</h2>
@@ -362,10 +339,9 @@
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <!-- Sudoku Cracker -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-game">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Sudoku Cracker"><i class="bx bx-plus"></i></a>
                 <a href="https://niturobert.github.io/sudoku_cracker/" title="More Details"><i class="bx bx-link"></i></a>
@@ -373,7 +349,6 @@
             </div>
           </div>
 
-          <!-- CamPy -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
@@ -384,7 +359,6 @@
             </div>
           </div>
 
-          <!-- Pythonin' Around -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-game">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
@@ -395,7 +369,6 @@
             </div>
           </div>
 
-          <!-- Infinity -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-latex">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
@@ -408,7 +381,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -419,35 +392,35 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-chat-left"></i></div>
-            <h4 class="title"><a href="">Communication</a></h4>
-            <p class="description">Communicated with customers daily, asked for feedback and improved their user experience.</p>
-          </div>
+          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up"> -->
+            <!-- <div class="icon"><i class="bi bi-chat-left"></i></div> -->
+            <!-- <h4 class="title"><a href="">Communication</a></h4> -->
+            <!-- <p class="description">Communicated with customers daily, asked for feedback and improved their user experience.</p> -->
+          <!-- </div> -->
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-terminal"></i></div>
             <h4 class="title"><a href="">Command Line</a></h4>
-            <p class="description">boh</p>
+            <p class="description">The command line can be used to manage and automate tasks on remote machines.</p>
           </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-speedometer2"></i></div>
             <h4 class="title"><a href="">Performance</a></h4>
-            <p class="description">beep</p>
+            <p class="description">Good performance keeps people on the website, increasing the number of customers.</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-search"></i></div>
-            <h4 class="title"><a href="">Attention to details</a></h4>
-            <p class="description">boop</p>
-          </div>
+            <div class="icon"><i class="bi bi-tags"></i></div>
+            <h4 class="title"><a href="">SEO</a></h4>
+            <p class="description">God</p>
+          </div> -->
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-lock"></i></div>
+            <div class="icon"><i class="bi bi-shield-check"></i></div>
             <h4 class="title"><a href="">Security</a></h4>
-            <p class="description">bap</p>
+            <p class="description">Experience in identifying and patching security flaws.e</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Deadline-Driven</a></h4>
-            <p class="description">woohoo</p>
+            <div class="icon"><i class="bi bi-hdd-network"></i></div>
+            <h4 class="title"><a href="">System Administration</a></h4>
+            <p class="description">Experience with Debian, CentOS and SUSE systems.</p>
           </div>
         </div>
 
@@ -497,11 +470,11 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <select id="select-translation" class="form-select" aria-label="Select the language" style="background-color: #121923; color: white;" onchange="translate_page()">
-        <option selected value="en">English</option>
+      <!-- <select id="select-translation" class="form-select" aria-label="Select the language" style="background-color: #121923; color: white;" onchange="translate_page()"> -->
+        <!-- <option selected value="en">English</option> -->
         <!-- <option value="it">Italiano</option> -->
         <!-- <option value="ro">Romana</option> -->
-      </select>
+      <!-- </select> -->
     </div>
   </footer><!-- End  Footer -->
 
